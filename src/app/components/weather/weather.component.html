@@ -6,8 +6,8 @@
 </div>
 
 <div>
-    <div *ngIf="showNotFoundWarning" class="not-found-warning">
-        <div>Given city not found</div>
+    <div *ngIf="error" class="error">
+        <div>{{error}}</div>
     </div>
 
     <div *ngIf="cityList">
