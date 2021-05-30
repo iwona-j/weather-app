@@ -1,0 +1,13 @@
+<div class="daily-weather__panel">
+    <app-daily-weather-tile
+            *ngFor="let dayWeather of dailyWeatherData"
+            [dayWeather]="dayWeather"
+    ></app-daily-weather-tile>
+</div>
+
+<app-weather-stats
+        [minTemp]="minTemp"
+        [maxTemp]="maxTemp"
+        [meanTemp]="meanValue"
+        [modeTemps]="modeValues"
+></app-weather-stats>

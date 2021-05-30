@@ -1,0 +1,24 @@
+<div>
+    <app-search
+            [cityName]="city?.name"
+            (searchForCity)="searchCityByName($event)"
+    ></app-search>
+</div>
+
+<div>
+    <div *ngIf="showNotFoundWarning" class="not-found-warning">
+        <div>Given city not found</div>
+    </div>
+
+    <div *ngIf="cityList">
+        <app-city-selector
+                [cityList]="cityList"
+                (chooseCity)="searchWeatherByCoordinates($event)"
+        ></app-city-selector>
+    </div>
+
+    <div *ngIf="dailyWeather">
+        <div class="city-name">{{city | cityName}}</div>
+        <app-daily-weather [dailyWeather]="dailyWeather"></app-daily-weather>
+    </div>
+</div>

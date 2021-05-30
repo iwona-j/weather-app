@@ -1,0 +1,18 @@
+<div class="daily-weather__date">{{dayWeather.dt * 1000 | date}}</div>
+<img [src]="'http://openweathermap.org/img/wn/' + dayWeather.weather[0].icon + '@2x.png'">
+<div class="daily-weather__row">
+    <span class="daily-weather__row--value">{{dayWeather.temp.morn | temperature}}</span>
+    <span class="daily-weather__row--title">morning</span>
+</div>
+<div class="daily-weather__row">
+    <span class="daily-weather__row--value">{{dayWeather.temp.day | temperature}}</span>
+    <span class="daily-weather__row--title">day</span>
+</div>
+<div class="daily-weather__row">
+    <span class="daily-weather__row--value">{{dayWeather.temp.night | temperature}}</span>
+    <span class="daily-weather__row--title">night</span>
+</div>
+<div class="daily-weather__row humidity">
+    <span class="daily-weather__row--value">{{dayWeather.humidity}}%</span>
+    <span class="daily-weather__row--title">humidity</span>
+</div>

@@ -1,0 +1,24 @@
+:host {
+  display: grid;
+  grid-template-columns: auto 201px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  input {
+    height: 100%;
+    padding: 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 0.2em 0 0 0.2em;
+  }
+
+  button {
+    height: 100%;
+    padding: 0.7em 1.7em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0 0.2em 0.2em 0;
+    color: #FFFFFF;
+    background-color: rgb(20, 81, 171);
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}

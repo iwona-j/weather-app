@@ -1,0 +1,22 @@
+<div class="weather-stats">
+    <div class="weather-stats__tile tile">
+        <div class="weather-stats__tile-title">minimum temperature</div>
+        <div class="weather-stats__tile-value">{{minTemp | temperature }}</div>
+    </div>
+
+    <div class="weather-stats__tile tile">
+        <div class="weather-stats__tile-title">maximum temperature</div>
+        <div class="weather-stats__tile-value">{{maxTemp | temperature }}</div>
+    </div>
+
+    <div class="weather-stats__tile tile">
+        <div class="weather-stats__tile-title">mean temperature</div>
+        <div class="weather-stats__tile-value">{{meanTemp | temperature}}</div>
+    </div>
+
+    <div class="weather-stats__tile tile">
+        <div class="weather-stats__tile-title">mode temperature</div>
+        <div class="weather-stats__tile-value" *ngFor="let modeTemp of modeTemps">{{modeTemp | temperature}}
+        </div>
+    </div>
+</div>
